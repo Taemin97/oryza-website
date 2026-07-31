@@ -1,0 +1,184 @@
+{
+  "Header": {
+    "logo": "Oryza & Co."
+  },
+  "Hero": {
+    "category": "01 / KOREAN GASTRONOMIC WINE & SPIRITS",
+    "title": "한국 전통주의 관능 데이터와<br />정밀 큐레이션",
+    "subtitle": "정량적 성분 분석과 엄격한 품질 검증을 바탕으로,<br />한국 전통주를 세계 미식 시장에 선보입니다."
+  },
+  "Unveiling": {
+    "coord": "HQ & STUDIO: 36.7898° N, 127.0018° E | ASAN, KOREA",
+    "title": "한국 전통주의 미식 가치 재정의",
+    "videoCaption": "GRAIN TO OBJECT — ORYZA & CO.",
+    "missions": {
+      "01": {
+        "title": "01. Terroir & Food Value",
+        "desc": "국산 쌀과 토양의 가치를 미식 오브제로 재정의하고, 지속 가능한 원료 생태계를 구축합니다."
+      },
+      "02": {
+        "title": "02. Scientific Standard & Global Grammar",
+        "desc": "글로벌 주류 문법에 맞춘 정량 데이터를 구축하여 객관적인 미식 평가 기준을 수립합니다."
+      },
+      "03": {
+        "title": "03. Heritage & Shared Value",
+        "desc": "전통 누룩과 양조 기법을 데이터로 아카이빙하고, 원액 공급가의 10%를 농가 인프라와 양조장 R&D에 재투자합니다."
+      }
+    }
+  },
+  "SubjectO": {
+    "label1": "04 / OBJET INAUGURAL",
+    "title": "Subject O — Distillata N°01",
+    "label2": "SINGLE RICE SPIRIT ARCHIVE",
+    "specs": {
+      "code_k": "OBJECT CODE",
+      "code_v": "SUBJECT O",
+      "lineage_k": "LINEAGE",
+      "lineage_v": "DISTILLATA N°01",
+      "type_k": "TYPE",
+      "type_v": "증류식 쌀 소주",
+      "base_k": "BOTANICAL BASE",
+      "base_v": "ORYZA SATIVA (국산 쌀)",
+      "maturation_k": "MATURATION",
+      "maturation_v": "전통 옹기 숙성",
+      "status_k": "STATUS",
+      "status_v": "원액 선별 중",
+      "unveiling_k": "OFFICIAL UNVEILING",
+      "unveiling_v": "2026년 겨울"
+    },
+    "message": "원액의 숙성과 관능 데이터 구축이 완료되는 시점, 한국 전통주의 새로운 정량적 기준을 제시합니다."
+  },
+  "Verification": {
+    "label": "03 / TECHNICAL VERIFICATION",
+    "title": "Technical Verification",
+    "subtitle": "객관적 데이터와 국내외 전문가 그룹의 선별 기준에 기반한 독립 큐레이션 체계",
+    "cards": {
+      "01": {
+        "title": "SINGLE ORIGIN BOTANICALS",
+        "desc": "쌀, 과실, 곡물 등 특정 지역 떼루아의 단일 국산 원료만을 분석하여, 불순한 향미가 통제되고 원료 본연의 순수한 구조를 지닌 원액을 선별합니다."
+      },
+      "02": {
+        "title": "INDEPENDENT VERIFICATION",
+        "desc": "기존 상업적 브랜딩을 배제하고, 국내외 주류·미식 전문가 그룹과의 협업을 통해 기술 규격과 관능 평가를 거쳐 정제된 원액만을 제3자의 시각에서 엄격히 검증합니다."
+      },
+      "03": {
+        "title": "SENSORY DATA ARCHIVING",
+        "desc": "원액의 화학적 성분 데이터와 관능 평가 지표를 체계적으로 아카이빙하여 전통주의 객관적 품질 보증 표준을 제공합니다."
+      }
+    }
+  },
+  "Manifesto": {
+    "label": "05 / BRAND MANIFESTO",
+    "title": "The Gateway to Korean Wine & Spirits",
+    "desc1": "Oryza & Co.는 단순한 주류 유통 플랫폼이 아닙니다.",
+    "desc2": "우리는 정립되지 못했던 한국 전통주의 떼루아와 관능 평가 지표를 정량화하여 객관적인 품질 표준을 구축합니다.",
+    "desc3": "검증되지 않은 상업적 수식어를 배제하고,<br />한국 전통주가 글로벌 미식 시장에서 명확한 카테고리로 안착하도록 가장 엄격한 관문을 제시합니다."
+  },
+  "Partnership": {
+    "label": "06 / SELECTIVE PARTNERSHIP",
+    "title": "선별적 파트너십 및 업계 문의",
+    "subtitle": "Oryza & Co.는 검증된 관능 데이터와 떼루아 가치를 바탕으로,<br />세계 미식 시장에 한국 전통주라는 새로운 독자적 카테고리를<br />함께 정립해 나갈 선구적 파트너들과 협력합니다.",
+    "cards": {
+      "01": {
+        "target": "FOR PRODUCERS",
+        "title": "원액 검증 및 데이터 구축",
+        "desc": "자사 원액의 성분 분석과 관능 데이터 구축을 위한\n기술 검증 접수 창구입니다.",
+        "btn": "원액 검증 및 문의"
+      },
+      "02": {
+        "target": "FOR BUYERS, SOMMELIERS & EXPERTS",
+        "title": "미식 카테고리 개척 및 배정 문의",
+        "desc": "검증 완료된 원액의 정량적 데이터 시트를 확인하고,\n글로벌 미식 시장에 새로운 카테고리를 안착시킬\n바이어, 소믈리에 및 주류 전문가와 배정을 협의합니다.",
+        "btn": "데이터 시트 및 배정 문의"
+      }
+    }
+  },
+  "Footer": {
+    "brand": "Oryza & Co.",
+    "notice": "Oryza & Co.는 전통주의 관능 데이터 구축 및 B2B 큐레이션 정보를 제공하는 플랫폼이며, 웹사이트 내 직접적인 주류 판매 및 결제를 진행하지 않습니다.",
+    "corporate_title": "CORPORATE INFO",
+    "company_name": "상호: Oryza & Co. (오리자앤코)",
+    "ceo": "대표: 박태민",
+    "registration": "사업자등록번호: 319-04-03684",
+    "address": "주소: 충청남도 아산시 배방읍 연화로51번길 26, 대한민국 (31467)",
+    "phone_kr": "전화 (KR): +82 10 9903 6163",
+    "phone_fr": "전화 (FR): +33 7 51 89 52 21",
+    "email": "이메일: contact@oryzaandco.com",
+    "network_title": "NETWORK",
+    "rights": "© 2026 Oryza & Co. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "data_usage": "Data Usage License",
+    "cookie": "Cookie Policy"
+  },
+  "ModalCommon": {
+    "required_mark": "* 표시항목은 필수 입력 항목입니다",
+    "err_required": "해당 부분을 입력해주세요",
+    "err_select": "항목을 선택해주세요",
+    "submitting": "전송 중...",
+    "success": "문의가 정상적으로 접수되었습니다.",
+    "error": "전송에 실패했습니다. 입력 내용을 확인 후 다시 시도해주세요.",
+    "close": "닫기"
+  },
+  "ModalDistillery": {
+    "title": "원액 기술 검증 및 데이터 구축 신청",
+    "distillery_name": "양조장명 *",
+    "contact_name": "대표자 / 담당자 성함 *",
+    "title_position": "담당자 직책",
+    "phone": "연락처 *",
+    "email": "이메일 *",
+    "category": "주종 카테고리 및 도수 (예: 증류주 40%)",
+    "purpose_1": "정량적 성분 분석 및 관능 데이터 시트 발급",
+    "purpose_2": "Oryza & Co. SUBJECT 브랜드 라인업 입점",
+    "purpose_3": "기타 문의",
+    "additional": "추가 문의 사항",
+    "submit": "문의 제출하기"
+  },
+  "ModalBuyer": {
+    "title": "관능 데이터 시트 요청 및 배정 협의",
+    "company_name": "회사 / 업장명 *",
+    "contact_name": "담당자 성함 *",
+    "contact_title": "담당자 직책 *",
+    "phone": "연락처 *",
+    "location": "국가 및 도시 (예: France, Paris) *",
+    "email": "이메일 *",
+    "type_1": "F&B 채널 (레스토랑, 바 등)",
+    "type_2": "수입 및 유통사 (Importer / Distributor)",
+    "type_3": "미디어 및 주류 평론가",
+    "request_1": "검증 라인업 관능 데이터 시트(PDF) 수령",
+    "request_2": "연간 수입 물량 배정(Allocation) 협의",
+    "request_3": "샘플 키트(Sample Kit) 요청",
+    "request_4": "기타 문의",
+    "additional": "추가 문의 사항",
+    "submit": "문의 제출하기"
+  },
+  "origin": {
+    "tag": "02 / BRAND ORIGIN & MISSION",
+    "step1": {
+      "title": "역사적 유산과 언어의 부재",
+      "desc1": "한국은 1,000년 이상 쌀을 발효해 왔으며, 13세기 실크로드를 통해 전래된 증류 기술은 전통주의 기원이 되었습니다. 그러나 세계적인 출하량에도 불구하고 정량적 기술 언어의 부재로 인해 글로벌 미식 시장 내 존재감은 극히 미비합니다."
+    },
+    "step2": {
+      "title": "식물학적 기원과 데이터 체계",
+      "desc1": "Oryza & Co.는 한국 전통주 핵심 원료인 쌀의 식물학적 학명 Oryza에서 출발합니다. 원료의 식물학적 기원을 명시하는 체계를 바탕으로 성분 분석과 관능 데이터를 구축하여 한국 주류를 정밀한 미식 표준으로 재정의합니다."
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "개인정보처리방침",
+      "content": "Oryza & Co.(이하 '회사')는 이용자의 개인정보를 중요시하며 관련 법령을 준수합니다.\n\n1. 수집하는 개인정보 항목\n- 수집 항목: 성함, 직책, 이메일, 연락처, 회사/양조장명, 국가 및 도시, 주종 정보, 문의 내용\n\n2. 개인정보의 수집 및 이용 목적\n- 원액 기술 검증 접수, 관능 데이터 시트(PDF) 발급, 연간 수량 배정(Allocation) 협의 및 B2B 문의 응대\n\n3. 개인정보의 보유 및 이용 기간\n- 문의 처리 완료 후 1년간 보관하며, 목적 달성 시 지체 없이 파기합니다.\n\n4. 개인정보 처리 위탁\n- 회사는 원활한 문의 접수를 위해 외부 서비스(Web3Forms)에 이메일 전송 시스템 운영을 위탁하고 있습니다."
+    },
+    "terms": {
+      "title": "이용약관",
+      "content": "1. 플랫폼의 목적\n본 웹사이트는 한국 전통주 및 증류주의 정량적 성분 분석 데이터와 관능 큐레이션 정보를 제공하는 B2B 데이터 플랫폼입니다.\n\n2. 직접 판매 및 결제 불가 명시\n본 웹사이트는 온라인 결제, 전자상거래, 주류의 직접적인 판매 및 배송 기능을 일체 제공하지 않습니다. 모든 수량 배정 및 거래 협의는 담당자와의 개별 B2B 상담을 통해 진행됩니다.\n\n3. 지적재산권\n본 웹사이트에 게재된 모든 데이터, 텍스트, 브랜드 명칭, 디자인 요소는 Oryza & Co.의 지적재산이며 무단 도용을 금합니다."
+    },
+    "license": {
+      "title": "데이터 이용 라이선스",
+      "content": "1. 데이터 이용 범위\n회사가 제공하는 정량적 성분 분석표 및 관능 데이터 시트(PDF)는 수신한 바이어, 소믈리에, 전문가의 비상업적 검토 및 구매 판단 목적으로만 제한적으로 사용 가능합니다.\n\n2. 금지 사항\n- 회사의 사전 서면 승인 없는 데이터의 제3자 무단 재배포, 판매, 양도\n- 데이터 수치, 그래프, 분석 결과의 임의 수정, 변조 및 가공\n- 웹사이트 내 데이터를 목적 없이 수집하는 자동화 크롤링 및 데이터베이스 추출 행위"
+    },
+    "cookie": {
+      "title": "쿠키 정책",
+      "content": "1. 쿠키의 사용 목적\n본 웹사이트는 이용자의 언어 설정(한국어, 영어, 프랑스어)을 유지하고 최적화된 브라우징 환경을 제공하기 위해 필수적인 기술적 쿠키만을 사용합니다.\n\n2. 쿠키의 거부\n이용자는 웹 브라우저 설정을 통해 쿠키 저장을 거부할 수 있으나, 이 경우 언어 설정 유지 등 일부 기능 이용에 제한이 생길 수 있습니다."
+    }
+  }
+}

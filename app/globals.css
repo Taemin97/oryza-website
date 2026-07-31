@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: #1A1A18;
+  --color-primary-light: #F4EFE4;
+  --color-accent-taupe: #A99C88;
+  --color-accent-red: #8A2E2A;
+
+  --font-serif: var(--font-gowun-batang), ui-serif, Georgia, serif;
+  --font-sans: "Open Sauce", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-primary-dark);
+  color: var(--color-primary-light);
+  font-family: var(--font-serif);
+}
+
+.data-font {
+  font-family: var(--font-sans);
+}

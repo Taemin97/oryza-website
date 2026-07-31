@@ -1,0 +1,184 @@
+{
+  "Header": {
+    "logo": "Oryza & Co."
+  },
+  "Hero": {
+    "category": "01 / KOREAN GASTRONOMIC WINE & SPIRITS",
+    "title": "Données Sensorielles et Curation<br />de Précision des Vins & Spiritueux Coréens",
+    "subtitle": "Présenter les vins & spiritueux traditionnels coréens au marché mondial de la gastronomie,<br />sur la base d'analyses chimiques quantitatives et d'une vérification rigoureuse."
+  },
+  "Unveiling": {
+    "coord": "SIÈGE & STUDIO : 36.7898° N, 127.0018° E | ASAN, CORÉE",
+    "title": "Redéfinir la Valeur Gastronomique des Vins & Spiritueux Coréens",
+    "videoCaption": "DU GRAIN À L'OBJET — ORYZA & CO.",
+    "missions": {
+      "01": {
+        "title": "01. Terroir & Valeur Gastronomique",
+        "desc": "Redéfinir le riz et le terroir coréen en objets gastronomiques tout en bâtissant un écosystème durable."
+      },
+      "02": {
+        "title": "02. Norme Scientifique & Grammaire Globale",
+        "desc": "Établir des normes gastronomiques objectives par des données quantitatives adaptées au marché mondial."
+      },
+      "03": {
+        "title": "03. Héritage & Valeur Partagée",
+        "desc": "Archiver les techniques traditionnelles et réinvestir 10% de la valeur dans l'infrastructure agricole et la R&D."
+      }
+    }
+  },
+  "SubjectO": {
+    "label1": "04 / OBJET INAUGURAL",
+    "title": "Subject O — Distillata N°01",
+    "label2": "ARCHIVES DE SPIRITUEUX DE RIZ UNIQUE",
+    "specs": {
+      "code_k": "CODE DE L'OBJET",
+      "code_v": "SUBJECT O",
+      "lineage_k": "LIGNÉE",
+      "lineage_v": "DISTILLATA N°01",
+      "type_k": "TYPE",
+      "type_v": "SOJU DE RIZ DISTILLÉ (SPIRITUEUX DE RIZ UNIQUE)",
+      "base_k": "BASE BOTANIQUE",
+      "base_v": "ORYZA SATIVA (RIZ CORÉEN)",
+      "maturation_k": "MATURATION",
+      "maturation_v": "POTERIE TRADITIONNELLE (ONGGI)",
+      "status_k": "STATUS",
+      "status_v": "Sélection du Liquide de Base en Cours",
+      "unveiling_k": "DÉVOILEMENT OFFICIEL",
+      "unveiling_v": "HIVER 2026"
+    },
+    "message": "Dès l'achèvement de l'affinage du distillat et de l'archivage des données sensorielles, un nouvel étalon quantitatif pour les spiritueux coréens sera présenté."
+  },
+  "Verification": {
+    "label": "03 / VÉRIFICATION TECHNIQUE",
+    "title": "Vérification Technique",
+    "subtitle": "Système de curation indépendant basé sur des données objectives et des critères d'experts coréens et internationaux",
+    "cards": {
+      "01": {
+        "title": "SINGLE ORIGIN BOTANICALS",
+        "desc": "En analysant des ingrédients coréens d'origine unique (riz, fruits, céréales) issus de terroirs spécifiques, nous sélectionnons des vins & spiritueux aux structures aromatiques pures."
+      },
+      "02": {
+        "title": "INDEPENDENT VERIFICATION",
+        "desc": "Excluant le commercial, nous vérifions rigoureusement les distillats raffinés en collaboration avec des experts coréens et internationaux en spiritueux et en gastronomie, selon des normes techniques et des évaluations sensorielles."
+      },
+      "03": {
+        "title": "SENSORY DATA ARCHIVING",
+        "desc": "En archivant systématiquement les données chimiques et sensorielles des distillats, nous fournissons un étalon d'assurance qualité objectif."
+      }
+    }
+  },
+  "Manifesto": {
+    "label": "05 / MANIFESTE DE MARQUE",
+    "title": "The Gateway to Korean Wine & Spirits",
+    "desc1": "Oryza & Co. est bien plus qu'une plateforme de distribution.",
+    "desc2": "Nous établissons des normes de qualité objectives en quantifiant le terroir et les indicateurs sensoriels des vins & spiritueux traditionnels coréens.",
+    "desc3": "Loin de toute rhétorique commerciale, nous sommes la passerelle rigoureuse qui impose les vins & spiritueux coréens comme une catégorie à part entière sur le marché mondial."
+  },
+  "Partnership": {
+    "label": "06 / PARTENARIAT SÉLECTIF",
+    "title": "Partenariat Sélectif & Demandes",
+    "subtitle": "Oryza & Co. collabore avec des partenaires pionniers pour établir une nouvelle catégorie<br />de vins & spiritueux coréens sur le marché mondial de la gastronomie.",
+    "cards": {
+      "01": {
+        "target": "FOR PRODUCERS",
+        "title": "Vérification et Structuration des Données",
+        "desc": "Canal dédié à l'analyse des composants chimiques\net au profilage des données sensorielles de votre produit.",
+        "btn": "Demander une Vérification"
+      },
+      "02": {
+        "target": "POUR LES ACHETEURS, SOMMELIERS & EXPERTS",
+        "title": "Pionniers du Marché & Allocation",
+        "desc": "Consultez les fiches de données quantitatives des vins & spiritueux vérifiés et discutez des allocations avec les acheteurs, sommeliers et experts du secteur qui ouvrent de nouvelles catégories dans la gastronomie mondiale.",
+        "btn": "Demander une Fiche & Allocation"
+      }
+    }
+  },
+  "Footer": {
+    "brand": "Oryza & Co.",
+    "notice": "Oryza & Co. est une plateforme fournissant des données sensorielles et des informations de curation B2B pour les vins & spiritueux traditionnels coréens, et ne procède à aucune vente directe ni paiement de vin & spiritueux sur ce site.",
+    "corporate_title": "INFOS ENTREPRISE",
+    "company_name": "Entreprise : Oryza & Co.",
+    "ceo": "PDG : Taemin Park",
+    "registration": "N° d'enregistrement : 319-04-03684",
+    "address": "Adresse : 26, Yeonhwa-ro 51beon-gil, Baebang-eup, Asan-si, Chungcheongnam-do, République de Corée (31467)",
+    "phone_kr": "Téléphone (KR) : +82 10 9903 6163",
+    "phone_fr": "Téléphone (FR) : +33 7 51 89 52 21",
+    "email": "Email : contact@oryzaandco.com",
+    "network_title": "RÉSEAU",
+    "rights": "© 2026 Oryza & Co. Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "data_usage": "Licence d'Utilisation des Données",
+    "cookie": "Politique des Cookies"
+  },
+  "ModalCommon": {
+    "required_mark": "* Champs obligatoires",
+    "err_required": "Veuillez remplir ce champ",
+    "err_select": "Veuillez sélectionner au moins une option",
+    "submitting": "Envoi en cours...",
+    "success": "Demande envoyée avec succès.",
+    "error": "Échec de l'envoi de la demande. Veuillez vérifier vos saisies et réessayer.",
+    "close": "Fermer"
+  },
+  "ModalDistillery": {
+    "title": "Demande de Profilage et Données du Liquide",
+    "distillery_name": "Nom de la Distillerie *",
+    "contact_name": "Nom du Contact *",
+    "title_position": "Poste / Fonction",
+    "phone": "Numéro de Téléphone *",
+    "email": "Adresse Email *",
+    "category": "Catégorie de Vin & Spiritueux & TAV (ex. Distillé, 40%)",
+    "purpose_1": "Analyse Chimique & Fiche de Données Sensorielles",
+    "purpose_2": "Intégration dans la Gamme Oryza & Co. SUBJECT",
+    "purpose_3": "Autres Demandes",
+    "additional": "Message Complémentaire",
+    "submit": "Soumettre la Demande"
+  },
+  "ModalBuyer": {
+    "title": "Demande de Fiche de Données & Allocation",
+    "company_name": "Nom de la Société / Établissement *",
+    "contact_name": "Nom *",
+    "contact_title": "Fonction *",
+    "phone": "Numéro de Téléphone *",
+    "location": "Pays & Ville (ex. France, Paris) *",
+    "email": "Adresse Email *",
+    "type_1": "Canaux F&B (Restaurants, Bars, etc.)",
+    "type_2": "Importateur / Distributeur",
+    "type_3": "Presse & Critique de Vins & Spiritueux",
+    "request_1": "Recevoir les Fiches de Données Sensorielles (PDF)",
+    "request_2": "Consulter pour l'Allocation Annuelle de Volume",
+    "request_3": "Demander un Kit d'Échantillons",
+    "request_4": "Autres Demandes",
+    "additional": "Message Complémentaire",
+    "submit": "Soumettre la Demande"
+  },
+  "origin": {
+    "tag": "02 / ORIGINE & MISSION DE MARQUE",
+    "step1": {
+      "title": "Héritage Millénaire & Langage Manquant",
+      "desc1": "La Corée fermente le riz depuis un millénaire, la distillation de la Route de la Soie ayant créé ses spiritueux. Malgré des volumes mondiaux, leur présence en haute gastronomie reste minimale faute d'un langage technique quantitatif."
+    },
+    "step2": {
+      "title": "Origine Botanique & Architecture de Données",
+      "desc1": "Oryza & Co. tire son nom d'Oryza, le genre botanique du riz. Fondés sur une taxonomie rigoureuse, nous profilons les composants chimiques et les données sensorielles pour établir une norme précise pour la gastronomie."
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politique de Confidentialité",
+      "content": "Oryza & Co. ('Société') respecte votre vie privée et se conforme aux réglementations sur la protection des données.\n\n1. Données Collectées\n- Nom, Fonction, E-mail, Téléphone, Entreprise/Domaine, Pays & Ville, Catégorie de produit, Détails de la demande.\n\n2. Finalités du Traitement\n- Traitement des demandes d'analyse technique, émission des fiches sensorielles (PDF), concertation sur l'allocation annuelle et suivi B2B.\n\n3. Durée de Conservation\n- Les données sont conservées pendant 1 an après le traitement de la demande, puis supprimées.\n\n4. Sous-traitance\n- L'envoi des formulaires est assuré via le service externe Web3Forms."
+    },
+    "terms": {
+      "title": "Conditions d'Utilisation",
+      "content": "1. Objet de la Plateforme\nCe site est une plateforme d'information B2B fournissant des analyses chimiques quantitatives et des données sensorielles sur les alcools coréens.\n\n2. Absence de Vente Directe et de Paiement\nCe site NE PERMET AUCUN paiement en ligne ni vente directe d'alcool. Toutes les allocations de volume et négociations commerciales s'effectuent par échange B2B direct.\n\n3. Propriété Intellectuelle\nToutes les données, textes et éléments visuels sont la propriété exclusive d'Oryza & Co."
+    },
+    "license": {
+      "title": "Licence d'Utilisation des Données",
+      "content": "1. Champ d'Utilisation Autorisé\nLes fiches de données sensorielles (PDF) fournies sont réservées exclusivement à l'évaluation non commerciale par les acheteurs, sommeliers et experts.\n\n2. Interdictions\n- Rediffusion, revente ou transfert à des tiers sans accord écrit préalable.\n- Modification, altération ou falsification des données et graphiques.\n- Extraction automatisée (scraping) des données du site."
+    },
+    "cookie": {
+      "title": "Politique relative aux Cookies",
+      "content": "1. Utilisation des Cookies\nNous utilisons uniquement des cookies techniques essentiels pour maintenir vos préférences linguistiques (KO, EN, FR) et optimiser la navigation.\n\n2. Gestion des Cookies\nVous pouvez désactiver les cookies dans votre navigateur, ce qui peut réinitialiser votre choix de langue."
+    }
+  }
+}

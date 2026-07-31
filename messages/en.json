@@ -1,0 +1,184 @@
+{
+  "Header": {
+    "logo": "Oryza & Co."
+  },
+  "Hero": {
+    "category": "01 / KOREAN GASTRONOMIC WINE & SPIRITS",
+    "title": "Sensory Data & Precision Curation<br />of Korean Wine & Spirits",
+    "subtitle": "Presenting Korean traditional wine & spirits to the global gastronomy market<br />based on quantitative chemical analysis and rigorous quality verification."
+  },
+  "Unveiling": {
+    "coord": "HQ & STUDIO: 36.7898° N, 127.0018° E | ASAN, KOREA",
+    "title": "Redefining the Value of Korean Wine & Spirits",
+    "videoCaption": "GRAIN TO OBJECT — ORYZA & CO.",
+    "missions": {
+      "01": {
+        "title": "01. Terroir & Food Value",
+        "desc": "Redefining Korean rice and terroir into gastronomic objects while building a sustainable supply ecosystem."
+      },
+      "02": {
+        "title": "02. Scientific Standard & Global Grammar",
+        "desc": "Establishing objective gastronomic standards through quantitative data aligned with global spirits grammar."
+      },
+      "03": {
+        "title": "03. Heritage & Shared Value",
+        "desc": "Archiving traditional techniques into data and reinvesting 10% of raw liquid value into farm infrastructure and winery R&D."
+      }
+    }
+  },
+  "SubjectO": {
+    "label1": "04 / OBJET INAUGURAL",
+    "title": "Subject O — Distillata N°01",
+    "label2": "SINGLE RICE SPIRIT ARCHIVE",
+    "specs": {
+      "code_k": "OBJECT CODE",
+      "code_v": "SUBJECT O",
+      "lineage_k": "LINEAGE",
+      "lineage_v": "DISTILLATA N°01",
+      "type_k": "TYPE",
+      "type_v": "DISTILLED RICE SOJU (SINGLE RICE SPIRIT)",
+      "base_k": "BOTANICAL BASE",
+      "base_v": "ORYZA SATIVA (KOREAN RICE)",
+      "maturation_k": "MATURATION",
+      "maturation_v": "TRADITIONAL EARTHENWARE (ONGGI)",
+      "status_k": "STATUS",
+      "status_v": "Raw Liquid Selection in Progress",
+      "unveiling_k": "OFFICIAL UNVEILING",
+      "unveiling_v": "WINTER 2026"
+    },
+    "message": "Upon completion of cellar aging and sensory data archiving, a new quantitative standard for Korean spirits will be presented."
+  },
+  "Verification": {
+    "label": "03 / TECHNICAL VERIFICATION",
+    "title": "Technical Verification",
+    "subtitle": "Independent curation system based on objective data and selection criteria from local and global expert groups",
+    "cards": {
+      "01": {
+        "title": "SINGLE ORIGIN BOTANICALS",
+        "desc": "By analyzing single-origin Korean ingredients (rice, fruits, grains) from specific regional terroirs, we select spirits and traditional wine & spirits with controlled off-notes and pure aromatic structures."
+      },
+      "02": {
+        "title": "INDEPENDENT VERIFICATION",
+        "desc": "Excluding commercial branding, we rigorously verify refined spirits from an objective third-party perspective through technical standards and sensory evaluation conducted with Korean and global spirits and gastronomy experts."
+      },
+      "03": {
+        "title": "SENSORY DATA ARCHIVING",
+        "desc": "By systematically archiving chemical and sensory data of spirits, we provide objective quality assurance standards for Korean spirits."
+      }
+    }
+  },
+  "Manifesto": {
+    "label": "05 / BRAND MANIFESTO",
+    "title": "The Gateway to Korean Wine & Spirits",
+    "desc1": "Oryza & Co. is more than a distribution platform.",
+    "desc2": "We build objective quality standards by quantifying the unstandardized terroir and sensory metrics of Korean traditional wine & spirits.",
+    "desc3": "Free from unverified commercial rhetoric, we serve as the rigorous gateway establishing Korean wine & spirits as a distinct, legitimate category in the global gastronomy market."
+  },
+  "Partnership": {
+    "label": "06 / SELECTIVE PARTNERSHIP",
+    "title": "Selective Partnership & Trade Inquiries",
+    "subtitle": "Oryza & Co. collaborates with pioneering partners to establish a distinct new category<br />of Korean wine & spirits in the global gastronomy market based on verified sensory data.",
+    "cards": {
+      "01": {
+        "target": "FOR PRODUCERS",
+        "title": "Verification & Data Structuring",
+        "desc": "Dedicated intake channel for chemical component analysis\nand sensory data profiling of your liquid.",
+        "btn": "Inquire for Verification"
+      },
+      "02": {
+        "target": "FOR BUYERS, SOMMELIERS & EXPERTS",
+        "title": "Category Pioneering & Allocation",
+        "desc": "Access quantitative data sheets for verified spirits and discuss allocations with buyers, sommeliers, and industry experts pioneering new categories in global gastronomy.",
+        "btn": "Inquire for Data Sheet & Allocation"
+      }
+    }
+  },
+  "Footer": {
+    "brand": "Oryza & Co.",
+    "notice": "Oryza & Co. is a platform providing sensory data and B2B curation information for Korean traditional spirits, and does not process direct alcohol sales or payment through this website.",
+    "corporate_title": "CORPORATE INFO",
+    "company_name": "Company: Oryza & Co.",
+    "ceo": "CEO: Taemin Park",
+    "registration": "Business Reg. No.: 319-04-03684",
+    "address": "Address: 26, Yeonhwa-ro 51beon-gil, Baebang-eup, Asan-si, Chungcheongnam-do, Republic of Korea (31467)",
+    "phone_kr": "Phone (KR): +82 10 9903 6163",
+    "phone_fr": "Phone (FR): +33 7 51 89 52 21",
+    "email": "Email: contact@oryzaandco.com",
+    "network_title": "NETWORK",
+    "rights": "© 2026 Oryza & Co. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "data_usage": "Data Usage License",
+    "cookie": "Cookie Policy"
+  },
+  "ModalCommon": {
+    "required_mark": "* Indicates required fields",
+    "err_required": "Please fill out this field",
+    "err_select": "Please select at least one option",
+    "submitting": "Sending...",
+    "success": "Inquiry submitted successfully.",
+    "error": "Failed to send the request. Please verify your inputs and try again.",
+    "close": "Close"
+  },
+  "ModalDistillery": {
+    "title": "Liquid Profiling & Data Request",
+    "distillery_name": "Distillery Name *",
+    "contact_name": "Contact Person Name *",
+    "title_position": "Title / Position",
+    "phone": "Phone Number *",
+    "email": "Email Address *",
+    "category": "Spirits Category & ABV (e.g. Distilled, 40%)",
+    "purpose_1": "Chemical Analysis & Sensory Data Sheet",
+    "purpose_2": "Inclusion in Oryza & Co. SUBJECT Brand Lineup",
+    "purpose_3": "Other Inquiries",
+    "additional": "Additional Message",
+    "submit": "Submit Inquiry"
+  },
+  "ModalBuyer": {
+    "title": "Sensory Data Sheet & Allocation Request",
+    "company_name": "Company / Venue Name *",
+    "contact_name": "Name *",
+    "contact_title": "Title *",
+    "phone": "Phone Number *",
+    "location": "Country & City (e.g. France, Paris) *",
+    "email": "Email Address *",
+    "type_1": "F&B Channels (Restaurants, Bars, etc.)",
+    "type_2": "Importer / Distributor",
+    "type_3": "Press & Spirits Critic",
+    "request_1": "Receive Sensory Data Sheets (PDF)",
+    "request_2": "Consult on Annual Volume Allocation",
+    "request_3": "Request Sample Kit",
+    "request_4": "Other Inquiries",
+    "additional": "Additional Message",
+    "submit": "Submit Inquiry"
+  },
+  "origin": {
+    "tag": "02 / BRAND ORIGIN & MISSION",
+    "step1": {
+      "title": "Heritage & The Missing Language",
+      "desc1": "Korea has fermented rice for over a millennium, with 13th-century Silk Road distillation creating its heritage spirits. Despite substantial global volume, its presence in fine dining remains minimal due to the lack of a quantitative technical language."
+    },
+    "step2": {
+      "title": "Botanical Origin & Data Architecture",
+      "desc1": "Oryza & Co. derives its identity from Oryza, the botanical genus of rice. Grounded in systematic taxonomy, we profile chemical components and sensory data to redefine Korean spirits into a precise global standard for gastronomy."
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "content": "Oryza & Co. ('Company') values your personal information and complies with applicable data protection regulations.\n\n1. Information Collected\n- Items: Name, Position/Title, Email, Phone Number, Company/Brewery Name, Country & City, Spirit Category, Inquiry Details.\n\n2. Purpose of Collection\n- Processing liquid verification requests, issuing sensory data sheets (PDF), consulting on annual volume allocations, and B2B inquiry management.\n\n3. Retention Period\n- Information is retained for 1 year following inquiry completion and destroyed promptly thereafter.\n\n4. Data Processing Outsourcing\n- Email transmission services are processed via Web3Forms strictly for contact form handling."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "content": "1. Purpose of Platform\nThis website is a B2B data platform providing quantitative chemical component analysis and sensory curation data for Korean spirits.\n\n2. No Direct Sales or Payments\nThis website DOES NOT facilitate direct online payments, e-commerce transactions, or direct sales of alcohol. All allocations and commercial terms are discussed through individual B2B channels.\n\n3. Intellectual Property\nAll data, text, branding, and design assets on this site are the exclusive intellectual property of Oryza & Co."
+    },
+    "license": {
+      "title": "Data Usage License",
+      "content": "1. Permitted Scope of Use\nQuantitative analysis sheets and sensory data PDFs issued by the Company are licensed solely for non-commercial evaluation by buyers, sommeliers, and trade experts.\n\n2. Prohibited Actions\n- Unauthorized redistribution, resale, or transfer to third parties without written consent.\n- Alteration, modification, or falsification of data metrics and graphs.\n- Automated scraping or data extraction from this website."
+    },
+    "cookie": {
+      "title": "Cookie Policy",
+      "content": "1. Purpose of Cookies\nWe use essential technical cookies strictly to retain your preferred language settings (KO, EN, FR) and optimize site performance.\n\n2. Managing Cookies\nYou may disable cookies via your browser settings; however, doing so may reset your language preference upon navigation."
+    }
+  }
+}
