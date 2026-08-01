@@ -1,8 +1,11 @@
-import createMiddleware from 'next-intl/middleware';
-import { routing } from './i18n/routing';
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
-export default createMiddleware(routing);
+// Simple pass-through proxy to test if page itself works
+export function proxy(request: NextRequest) {
+  return NextResponse.next();
+}
 
 export const config = {
-    matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'  ]
+  matcher: ['/((?!api|_next|_vercel|.*\\..*).*)'  ]
 };
