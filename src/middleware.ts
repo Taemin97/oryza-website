@@ -1,11 +1,12 @@
 import createMiddleware from 'next-intl/middleware';
 
 export default createMiddleware({
-    locales: ['ko', 'en', 'fr'],
+    locales: ['ko', 'en'],
     defaultLocale: 'ko',
-    localePrefix: 'as-needed'
+    localeDetection: false
 });
 
 export const config = {
-    matcher: ['/', '/(ko|en|fr)/:path*', '/((?!_next|_vercel|.*\\..*).*)']
-}
+    // 정적 파일 및 _next 내부 파일을 제외한 모든 요청에 미들웨어 적용
+    matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
+};
