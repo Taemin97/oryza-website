@@ -12,10 +12,21 @@ const gowunBatang = Gowun_Batang({
   subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-  title: 'Oryza & Co. | Project K-Terroir',
-  description: 'Global Curation & Branding Platform for Premium Korean Spirits & Fermented Rice Wines',
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  
+  let title = 'Oryza & Co. | Global Korean Spirits Platform';
+  if (locale === 'ko') {
+    title = 'Oryza & Co. | 한국 전통주 글로벌 플랫폼';
+  } else if (locale === 'fr') {
+    title = 'Oryza & Co. | Plateforme Globale de Spiritueux Coréens';
+  }
+
+  return {
+    title,
+    description: 'Global Curation & Branding Platform for Premium Korean Spirits & Fermented Rice Wines',
+  };
+}
 
 // 정적 생성: 지원하는 모든 로케일에 대해 경로를 미리 생성
 export function generateStaticParams() {
