@@ -35,11 +35,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     canonicalPath = '/fr/';
   }
 
+  // 동적 파싱 로직 (쿼리 파라미터 제거 및 절대 경로 보장)
+  // generateMetadata in layout does not receive searchParams, naturally isolating it from queries.
+  // We use URL constructor to ensure it's a completely valid absolute URL without any search string.
+  const canonicalUrl = new URL(canonicalPath, siteUrl).href.split('?')[0];
+
   return {
+    metadataBase: new URL(siteUrl),
     title,
     description,
     alternates: {
-      canonical: `${siteUrl}${canonicalPath}`,
+      canonical: canonicalUrl,
       languages: {
         'ko': `${siteUrl}/`,
         'en': `${siteUrl}/en/`,
@@ -52,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       siteName: 'Oryza & Co.',
       title,
       description: ogDescription,
-      url: `${siteUrl}${canonicalPath}`,
+      url: canonicalUrl,
       images: [
         {
           url: 'https://oryzaandco.com/images/hero-grain-object.jpeg',

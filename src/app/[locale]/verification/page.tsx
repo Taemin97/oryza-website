@@ -6,11 +6,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   
   const canonicalPath = locale === 'ko' ? '/verification' : `/${locale}/verification`;
   
+  // 동적 파싱 로직 (쿼리 파라미터 제거 및 절대 경로 보장)
+  const canonicalUrl = new URL(canonicalPath, siteUrl).href.split('?')[0];
+  
   return {
+    metadataBase: new URL(siteUrl),
     title: '기술 검증 및 데이터 체계 | Oryza & Co.',
     description: '단일 국산 원료 선별, 전문가 그룹의 독립 검증, 화학적 성분 분석 및 관능 평가 데이터 아카이빙을 통해 전통주의 객관적 품질 보증 표준을 제공합니다.',
     alternates: {
-      canonical: `${siteUrl}${canonicalPath}`,
+      canonical: canonicalUrl,
       languages: {
         'ko': `${siteUrl}/verification`,
         'en': `${siteUrl}/en/verification`,
@@ -22,7 +26,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'article',
       title: '기술 검증 및 데이터 체계 | Oryza & Co.',
       description: '단일 국산 원료 선별, 독립 검증, 성분 분석 데이터 아카이빙을 통한 객관적 품질 보증 표준.',
-      url: `${siteUrl}${canonicalPath}`,
+      url: canonicalUrl,
       images: [
         {
           url: 'https://oryzaandco.com/images/russik-there-3049662_1920.jpg',
