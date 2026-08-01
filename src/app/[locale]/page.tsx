@@ -1,10 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect} from 'react';
 
-import { useTranslations, useLocale } from 'next-intl';
-import { routing } from '@/i18n/routing';
-import { Link } from '@/i18n/navigation';
+import { useTranslations, useLocale} from 'next-intl';
+import { routing} from '@/i18n/routing';
+import { Link} from '@/i18n/navigation';
 import BrandOriginSection from '@/components/BrandOriginSection';
 
 export default function HomePage() {
@@ -34,17 +34,17 @@ export default function HomePage() {
     setIsBuyerOpen(false);
     setLegalModalType(null);
     setFormErrors({});
-  };
+ };
 
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         closeModal();
-      }
-    };
+     }
+   };
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
-  }, []);
+ }, []);
 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>, formType: string) => {
     e.preventDefault();
@@ -60,8 +60,8 @@ export default function HomePage() {
       if (!el.value.trim()) {
         newErrors[el.name] = tModalCommon('err_required');
         hasError = true;
-      }
-    });
+     }
+   });
 
     // Validate checkboxes/radios based on formType
     if (formType === 'Distillery') {
@@ -69,24 +69,24 @@ export default function HomePage() {
       if (purposes.length === 0) {
         newErrors['purpose'] = tModalCommon('err_select');
         hasError = true;
-      }
-    } else if (formType === 'Buyer') {
+     }
+   } else if (formType === 'Buyer') {
       const requests = formData.getAll('request');
       if (requests.length === 0) {
         newErrors['request'] = tModalCommon('err_select');
         hasError = true;
-      }
+     }
       const businessType = formData.get('business_type');
       if (!businessType) {
         newErrors['business_type'] = tModalCommon('err_select');
         hasError = true;
-      }
-    }
+     }
+   }
 
     if (hasError) {
       setFormErrors(newErrors);
       return;
-    }
+   }
 
     setFormErrors({});
     setIsSubmitting(true);
@@ -96,12 +96,12 @@ export default function HomePage() {
       if (objectData[key]) {
         if (!Array.isArray(objectData[key])) {
           objectData[key] = [objectData[key]];
-        }
+       }
         objectData[key].push(value);
-      } else {
+     } else {
         objectData[key] = value;
-      }
-    });
+     }
+   });
 
     if (Array.isArray(objectData['purpose'])) objectData['purpose'] = objectData['purpose'].join(', ');
     if (Array.isArray(objectData['request'])) objectData['request'] = objectData['request'].join(', ');
@@ -118,26 +118,26 @@ export default function HomePage() {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
-        },
+       },
         body: jsonPayload,
-      });
+     });
       const data = await response.json();
       
       if (response.ok && data.success) {
         alert(tModalCommon('success'));
         form.reset();
         closeModal();
-      } else {
+     } else {
         console.error('Web3Forms Error:', data.message);
         alert(tModalCommon('error'));
-      }
-    } catch (error) {
+     }
+   } catch (error) {
       console.error('Web3Forms Submission Error:', error);
       alert(tModalCommon('error'));
-    } finally {
+   } finally {
       setIsSubmitting(false);
-    }
-  };
+   }
+ };
 
   return (
     <div className="min-h-screen bg-primary-dark text-primary-light font-serif selection:bg-accent-taupe selection:text-primary-dark">
@@ -159,7 +159,7 @@ export default function HomePage() {
               locale={l}
               className={`transition-colors duration-300 ${
                 l === locale ? 'text-primary-light font-semibold' : 'hover:text-primary-light'
-              }`}
+             }`}
             >
               {l}
             </Link>
@@ -191,11 +191,11 @@ export default function HomePage() {
           </span>
           <h1 
             className="text-2xl md:text-4xl leading-[1.35] tracking-tight font-serif text-[#F4EFE4] text-center"
-            dangerouslySetInnerHTML={{ __html: tHero('title') }}
+            dangerouslySetInnerHTML={{ __html: tHero('title')}}
           />
           <p 
-            className="text-xs md:text-sm text-[#F4EFE4]/75 font-light tracking-wide max-w-2xl text-center leading-relaxed mt-1 break-keep"
-            dangerouslySetInnerHTML={{ __html: tHero('subtitle') }}
+            className="text-xs md:text-sm text-[#F4EFE4]/75 font-light tracking-wide max-w-2xl text-center leading-relaxed mt-1"
+            dangerouslySetInnerHTML={{ __html: tHero('subtitle')}}
           />
         </div>
       </section>
@@ -212,7 +212,7 @@ export default function HomePage() {
           </div>
 
           {/* Main Title */}
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal max-w-4xl leading-snug break-keep text-balance">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-normal max-w-4xl leading-snug">
             {tUnveiling('title')}
           </h2>
 
@@ -238,7 +238,7 @@ export default function HomePage() {
                 <h3 className="text-lg md:text-xl font-normal tracking-wide text-primary-light">
                   {tUnveiling(`missions.${key}.title`)}
                 </h3>
-                <p className={`text-sm md:text-base font-light leading-relaxed tracking-normal text-[#F4EFE4]/80 ${locale === 'ko' ? 'break-keep' : 'break-normal text-pretty'}`}>
+                <p className={`text-sm md:text-base font-light leading-relaxed tracking-normal text-[#F4EFE4]/80`}>
                   {tUnveiling(`missions.${key}.desc`)}
                 </p>
               </div>
@@ -255,10 +255,10 @@ export default function HomePage() {
           <span className="data-font text-xs tracking-[0.2em] text-accent-taupe uppercase mb-4">
             {tVerification('label')}
           </span>
-          <h2 className="text-3xl md:text-4xl font-serif text-primary-light my-3 break-keep">
+          <h2 className="text-3xl md:text-4xl font-serif text-primary-light my-3">
             {tVerification('title')}
           </h2>
-          <p className="text-sm md:text-base text-[#F4EFE4]/70 font-light tracking-wide max-w-2xl leading-relaxed mb-12 break-keep text-balance">
+          <p className="text-sm md:text-base text-[#F4EFE4]/70 font-light tracking-wide max-w-2xl leading-relaxed mb-12">
             {tVerification('subtitle')}
           </p>
         </div>
@@ -270,7 +270,7 @@ export default function HomePage() {
               <h3 className="text-lg md:text-xl font-normal tracking-wide text-primary-light">
                 {tVerification(`cards.${key}.title`)}
               </h3>
-              <p className={`text-sm md:text-base font-light leading-relaxed tracking-normal text-[#F4EFE4]/80 ${locale === 'ko' ? 'break-keep' : 'break-normal text-pretty'}`}>
+              <p className={`text-sm md:text-base font-light leading-relaxed tracking-normal text-[#F4EFE4]/80`}>
                 {tVerification(`cards.${key}.desc`)}
               </p>
             </div>
@@ -289,7 +289,7 @@ export default function HomePage() {
               src="/images/subject-o-teaser.jpg" 
               alt="Subject O Teaser" 
               className="w-full h-full object-cover rounded-none border border-accent-taupe/20 absolute inset-0"
-              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+              onError={(e) => { e.currentTarget.style.display = 'none';}}
             />
           </div>
 
@@ -298,7 +298,7 @@ export default function HomePage() {
             <span className="data-font text-xs tracking-[0.2em] text-accent-taupe uppercase">
               {tSubjectO('label1')}
             </span>
-            <h2 className="text-3xl md:text-4xl font-serif text-primary-light my-3 break-keep">
+            <h2 className="text-3xl md:text-4xl font-serif text-primary-light my-3">
               {tSubjectO('title')}
             </h2>
             <span className="data-font text-sm tracking-widest text-accent-taupe uppercase mb-8">
@@ -308,17 +308,17 @@ export default function HomePage() {
             {/* Specs Table */}
             <div className="flex flex-col w-full border-t border-accent-taupe/20">
               {[
-                { k: tSubjectO('specs.code_k'), v: tSubjectO('specs.code_v') },
-                { k: tSubjectO('specs.lineage_k'), v: tSubjectO('specs.lineage_v') },
-                { k: tSubjectO('specs.type_k'), v: tSubjectO('specs.type_v') },
-                { k: tSubjectO('specs.base_k'), v: tSubjectO('specs.base_v') },
-                { k: tSubjectO('specs.maturation_k'), v: tSubjectO('specs.maturation_v') },
-                { k: tSubjectO('specs.status_k'), v: tSubjectO('specs.status_v') },
-                { k: tSubjectO('specs.unveiling_k'), v: tSubjectO('specs.unveiling_v'), highlight: true }
+                { k: tSubjectO('specs.code_k'), v: tSubjectO('specs.code_v')},
+                { k: tSubjectO('specs.lineage_k'), v: tSubjectO('specs.lineage_v')},
+                { k: tSubjectO('specs.type_k'), v: tSubjectO('specs.type_v')},
+                { k: tSubjectO('specs.base_k'), v: tSubjectO('specs.base_v')},
+                { k: tSubjectO('specs.maturation_k'), v: tSubjectO('specs.maturation_v')},
+                { k: tSubjectO('specs.status_k'), v: tSubjectO('specs.status_v')},
+                { k: tSubjectO('specs.unveiling_k'), v: tSubjectO('specs.unveiling_v'), highlight: true}
               ].map((spec, i) => (
                 <div key={i} className="flex justify-between items-center border-b border-accent-taupe/20 py-3 font-mono uppercase">
                   <span className="text-accent-taupe text-xs tracking-wider pr-4 text-left flex-shrink-0">{spec.k}</span>
-                  <span className={`text-right break-keep text-xs md:text-sm ${spec.highlight ? 'text-accent-red font-semibold' : 'text-primary-light'}`}>
+                  <span className={`text-right text-xs md:text-sm ${spec.highlight ? 'text-accent-red font-semibold' : 'text-primary-light'}`}>
                     {spec.v}
                   </span>
                 </div>
@@ -326,7 +326,7 @@ export default function HomePage() {
             </div>
 
             {/* Branding Message */}
-            <p className={`mt-8 text-sm md:text-base text-[#F4EFE4]/80 font-serif leading-relaxed ${locale === 'ko' ? 'break-keep' : 'break-normal text-pretty'}`}>
+            <p className={`mt-8 text-sm md:text-base text-[#F4EFE4]/80 font-serif leading-relaxed`}>
               {tSubjectO('message')}
             </p>
           </div>
@@ -340,15 +340,15 @@ export default function HomePage() {
           <span className="data-font text-xs tracking-[0.2em] text-accent-taupe uppercase mb-6">
           {tManifesto('label')}
         </span>
-        <h2 className="text-3xl md:text-5xl font-serif text-primary-light mb-16 md:mb-20 leading-tight break-keep text-balance">
+        <h2 className="text-3xl md:text-5xl font-serif text-primary-light mb-16 md:mb-20 leading-tight">
           {tManifesto('title')}
         </h2>
         <div className="flex flex-col items-center w-full space-y-8 md:space-y-10">
           {[1, 2, 3].map((i) => (
             <p 
               key={i} 
-              className={`text-base md:text-lg lg:text-xl text-[#F4EFE4]/85 font-light tracking-wide text-center leading-relaxed w-full ${locale === 'ko' ? 'break-keep' : 'break-normal text-pretty'}`}
-              dangerouslySetInnerHTML={{ __html: tManifesto(`desc${i}`) }}
+              className={`text-base md:text-lg lg:text-xl text-[#F4EFE4]/85 font-light tracking-wide text-center leading-relaxed w-full`}
+              dangerouslySetInnerHTML={{ __html: tManifesto(`desc${i}`)}}
             />
           ))}
         </div>
@@ -362,12 +362,12 @@ export default function HomePage() {
           <span className="data-font text-xs tracking-[0.2em] text-accent-taupe uppercase">
             {tPartnership('label')}
           </span>
-          <h2 className="text-2xl md:text-3xl font-serif text-primary-light mt-3 mb-4 tracking-tight break-keep">
+          <h2 className="text-2xl md:text-3xl font-serif text-primary-light mt-3 mb-4 tracking-tight">
             {tPartnership('title')}
           </h2>
           <p 
-            className="text-sm text-[#F4EFE4]/75 font-light tracking-wide mb-12 max-w-2xl mx-auto text-center leading-relaxed break-keep"
-            dangerouslySetInnerHTML={{ __html: tPartnership('subtitle') }}
+            className="text-sm text-[#F4EFE4]/75 font-light tracking-wide mb-12 max-w-2xl mx-auto text-center leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: tPartnership('subtitle')}}
           />
         </div>
 
@@ -378,10 +378,10 @@ export default function HomePage() {
                 <span className="font-mono text-xs text-[#A99C88] tracking-widest block mb-4 uppercase">
                   {tPartnership(`cards.${key}.target`)}
                 </span>
-                <h3 className="text-lg md:text-xl font-normal tracking-wide text-primary-light mb-3 break-keep">
+                <h3 className="text-lg md:text-xl font-normal tracking-wide text-primary-light mb-3">
                   {tPartnership(`cards.${key}.title`)}
                 </h3>
-                <p className="text-xs md:text-sm text-[#F4EFE4]/70 font-light leading-relaxed break-keep mt-2 min-h-[72px] whitespace-pre-line">
+                <p className="text-xs md:text-sm text-[#F4EFE4]/70 font-light leading-relaxed mt-2 min-h-[72px] whitespace-pre-line">
                   {tPartnership(`cards.${key}.desc`)}
                 </p>
               </div>
@@ -409,7 +409,7 @@ export default function HomePage() {
                 alt={tFooter('brand')} 
                 className="h-16 md:h-20 w-auto object-contain mb-6" 
               />
-              <p className="text-[11px] text-[#F4EFE4]/50 leading-relaxed font-light break-keep space-y-2 max-w-md">
+              <p className="text-[11px] text-[#F4EFE4]/50 leading-relaxed font-light space-y-2 max-w-md">
                 {tFooter('notice')}
               </p>
             </div>
@@ -419,7 +419,7 @@ export default function HomePage() {
               <h3 className="text-xs font-mono text-[#A99C88] tracking-widest mb-3 uppercase">
                 {tFooter('corporate_title')}
               </h3>
-              <div className={`text-[11px] text-[#F4EFE4]/60 space-y-1.5 font-light leading-relaxed ${locale === 'ko' ? 'break-keep' : ''}`}>
+              <div className={`text-[11px] text-[#F4EFE4]/60 space-y-1.5 font-light leading-relaxed`}>
                 <p>{tFooter('company_name')}</p>
                 <p>{tFooter('ceo')}</p>
                 <p>{tFooter('registration')}</p>
@@ -474,7 +474,7 @@ export default function HomePage() {
             >
               ✕
             </button>
-            <h3 className="font-serif text-xl md:text-2xl text-[#F4EFE4] tracking-wide break-keep">
+            <h3 className="font-serif text-xl md:text-2xl text-[#F4EFE4] tracking-wide">
               {tModalDistillery('title')}
             </h3>
             <p className="text-[#A99C88] text-[11px] mb-6 mt-1 font-mono">{tModalCommon('required_mark')}</p>
@@ -483,54 +483,54 @@ export default function HomePage() {
               <input type="hidden" name="form_type" value="Distillery Request" />
               
               <div>
-                <input data-required="true" type="text" name="distillery_name" placeholder={tModalDistillery('distillery_name')} className={`bg-[#222220] border ${formErrors['distillery_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                <input data-required="true" type="text" name="distillery_name" placeholder={tModalDistillery('distillery_name')} className={`bg-[#222220] border ${formErrors['distillery_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                 {formErrors['distillery_name'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['distillery_name']}</p>}
               </div>
               <div>
-                <input data-required="true" type="text" name="contact_name" placeholder={tModalDistillery('contact_name')} className={`bg-[#222220] border ${formErrors['contact_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                <input data-required="true" type="text" name="contact_name" placeholder={tModalDistillery('contact_name')} className={`bg-[#222220] border ${formErrors['contact_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                 {formErrors['contact_name'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['contact_name']}</p>}
               </div>
               <div>
-                <input type="text" name="title_position" placeholder={tModalDistillery('title_position')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep" />
+                <input type="text" name="title_position" placeholder={tModalDistillery('title_position')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <input data-required="true" type="tel" name="phone" placeholder={tModalDistillery('phone')} className={`bg-[#222220] border ${formErrors['phone'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                  <input data-required="true" type="tel" name="phone" placeholder={tModalDistillery('phone')} className={`bg-[#222220] border ${formErrors['phone'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                   {formErrors['phone'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['phone']}</p>}
                 </div>
                 <div>
-                  <input data-required="true" type="email" name="email" placeholder={tModalDistillery('email')} className={`bg-[#222220] border ${formErrors['email'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                  <input data-required="true" type="email" name="email" placeholder={tModalDistillery('email')} className={`bg-[#222220] border ${formErrors['email'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                   {formErrors['email'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['email']}</p>}
                 </div>
               </div>
               <div>
-                <input type="text" name="category" placeholder={tModalDistillery('category')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep" />
+                <input type="text" name="category" placeholder={tModalDistillery('category')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50" />
               </div>
               
               <div className="pt-2">
                 <label className="flex items-start gap-3 cursor-pointer group">
                   <input type="checkbox" name="purpose" value="Chemical Analysis & Sensory Data Sheet" className="mt-1 accent-[#A99C88]" />
-                  <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalDistillery('purpose_1')}</span>
+                  <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalDistillery('purpose_1')}</span>
                 </label>
                 <label className="flex items-start gap-3 cursor-pointer group mt-3">
                   <input type="checkbox" name="purpose" value="Inclusion in Oryza & Co. SUBJECT Brand Lineup" className="mt-1 accent-[#A99C88]" />
-                  <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalDistillery('purpose_2')}</span>
+                  <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalDistillery('purpose_2')}</span>
                 </label>
                 <label className="flex items-start gap-3 cursor-pointer group mt-3">
                   <input type="checkbox" name="purpose" value="Other Inquiries" className="mt-1 accent-[#A99C88]" />
-                  <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalDistillery('purpose_3')}</span>
+                  <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalDistillery('purpose_3')}</span>
                 </label>
                 {formErrors['purpose'] && <p className="text-red-400 text-[10px] mt-2 ml-1">{formErrors['purpose']}</p>}
               </div>
 
               <div className="pt-2">
-                <textarea name="additional_message" rows={3} placeholder={tModalDistillery('additional')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full resize-none placeholder-[#A99C88]/50 break-keep" />
+                <textarea name="additional_message" rows={3} placeholder={tModalDistillery('additional')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full resize-none placeholder-[#A99C88]/50" />
               </div>
 
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full py-4 text-center text-sm font-mono tracking-wider transition-all duration-300 mt-6 border border-[#F4EFE4]/80 text-[#F4EFE4] hover:bg-[#F4EFE4] hover:text-[#111110] uppercase disabled:opacity-50 disabled:cursor-not-allowed break-keep"
+                className="w-full py-4 text-center text-sm font-mono tracking-wider transition-all duration-300 mt-6 border border-[#F4EFE4]/80 text-[#F4EFE4] hover:bg-[#F4EFE4] hover:text-[#111110] uppercase disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? tModalCommon('submitting') : tModalDistillery('submit')}
               </button>
@@ -551,7 +551,7 @@ export default function HomePage() {
             >
               ✕
             </button>
-            <h3 className="font-serif text-xl md:text-2xl text-[#F4EFE4] tracking-wide break-keep">
+            <h3 className="font-serif text-xl md:text-2xl text-[#F4EFE4] tracking-wide">
               {tModalBuyer('title')}
             </h3>
             <p className="text-[#A99C88] text-[11px] mb-6 mt-1 font-mono">{tModalCommon('required_mark')}</p>
@@ -560,84 +560,84 @@ export default function HomePage() {
               <input type="hidden" name="form_type" value="Buyer & Sommelier Inquiry" />
               
               <div>
-                <input data-required="true" type="text" name="company_name" placeholder={tModalBuyer('company_name')} className={`bg-[#222220] border ${formErrors['company_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                <input data-required="true" type="text" name="company_name" placeholder={tModalBuyer('company_name')} className={`bg-[#222220] border ${formErrors['company_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                 {formErrors['company_name'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['company_name']}</p>}
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <input data-required="true" type="text" name="contact_name" placeholder={tModalBuyer('contact_name')} className={`bg-[#222220] border ${formErrors['contact_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                  <input data-required="true" type="text" name="contact_name" placeholder={tModalBuyer('contact_name')} className={`bg-[#222220] border ${formErrors['contact_name'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                   {formErrors['contact_name'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['contact_name']}</p>}
                 </div>
                 <div>
-                  <input data-required="true" type="text" name="contact_title" placeholder={tModalBuyer('contact_title')} className={`bg-[#222220] border ${formErrors['contact_title'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                  <input data-required="true" type="text" name="contact_title" placeholder={tModalBuyer('contact_title')} className={`bg-[#222220] border ${formErrors['contact_title'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                   {formErrors['contact_title'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['contact_title']}</p>}
                 </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <input data-required="true" type="tel" name="phone" placeholder={tModalBuyer('phone')} className={`bg-[#222220] border ${formErrors['phone'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                  <input data-required="true" type="tel" name="phone" placeholder={tModalBuyer('phone')} className={`bg-[#222220] border ${formErrors['phone'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                   {formErrors['phone'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['phone']}</p>}
                 </div>
                 <div>
-                  <input data-required="true" type="email" name="email" placeholder={tModalBuyer('email')} className={`bg-[#222220] border ${formErrors['email'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                  <input data-required="true" type="email" name="email" placeholder={tModalBuyer('email')} className={`bg-[#222220] border ${formErrors['email'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                   {formErrors['email'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['email']}</p>}
                 </div>
               </div>
               <div>
-                <input data-required="true" type="text" name="location" placeholder={tModalBuyer('location')} className={`bg-[#222220] border ${formErrors['location'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50 break-keep`} />
+                <input data-required="true" type="text" name="location" placeholder={tModalBuyer('location')} className={`bg-[#222220] border ${formErrors['location'] ? 'border-red-500/50' : 'border-[#A99C88]/30'} text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full placeholder-[#A99C88]/50`} />
                 {formErrors['location'] && <p className="text-red-400 text-[10px] mt-1.5 ml-1">{formErrors['location']}</p>}
               </div>
               
               <div className="pt-2">
-                <p className="text-xs text-[#A99C88] mb-2 font-mono uppercase tracking-widest break-keep">Business Type *</p>
+                <p className="text-xs text-[#A99C88] mb-2 font-mono uppercase tracking-widest">Business Type *</p>
                 <div className="flex flex-col gap-3">
                   <label className="flex items-center gap-3 cursor-pointer group">
                     <input type="radio" name="business_type" value="F&B Channel" className="accent-[#A99C88]" />
-                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalBuyer('type_1')}</span>
+                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalBuyer('type_1')}</span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer group">
                     <input type="radio" name="business_type" value="Importer / Distributor" className="accent-[#A99C88]" />
-                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalBuyer('type_2')}</span>
+                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalBuyer('type_2')}</span>
                   </label>
                   <label className="flex items-center gap-3 cursor-pointer group">
                     <input type="radio" name="business_type" value="Press & Critic" className="accent-[#A99C88]" />
-                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalBuyer('type_3')}</span>
+                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalBuyer('type_3')}</span>
                   </label>
                 </div>
                 {formErrors['business_type'] && <p className="text-red-400 text-[10px] mt-2 ml-1">{formErrors['business_type']}</p>}
               </div>
 
               <div className="pt-4 border-t border-[#A99C88]/15 mt-4">
-                <p className="text-xs text-[#A99C88] mb-2 font-mono uppercase tracking-widest break-keep">Requests *</p>
+                <p className="text-xs text-[#A99C88] mb-2 font-mono uppercase tracking-widest">Requests *</p>
                 <div className="flex flex-col gap-3">
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="checkbox" name="request" value="Receive Data Sheets" className="mt-1 accent-[#A99C88]" />
-                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalBuyer('request_1')}</span>
+                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalBuyer('request_1')}</span>
                   </label>
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="checkbox" name="request" value="Allocation Consultation" className="mt-1 accent-[#A99C88]" />
-                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalBuyer('request_2')}</span>
+                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalBuyer('request_2')}</span>
                   </label>
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="checkbox" name="request" value="Sample Kit Request" className="mt-1 accent-[#A99C88]" />
-                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalBuyer('request_3')}</span>
+                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalBuyer('request_3')}</span>
                   </label>
                   <label className="flex items-start gap-3 cursor-pointer group">
                     <input type="checkbox" name="request" value="Other Inquiries" className="mt-1 accent-[#A99C88]" />
-                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4] break-keep">{tModalBuyer('request_4')}</span>
+                    <span className="text-sm text-[#F4EFE4]/80 group-hover:text-[#F4EFE4]">{tModalBuyer('request_4')}</span>
                   </label>
                 </div>
                 {formErrors['request'] && <p className="text-red-400 text-[10px] mt-2 ml-1">{formErrors['request']}</p>}
               </div>
 
               <div className="pt-2 border-t border-[#A99C88]/15 mt-4">
-                <textarea name="additional_message" rows={3} placeholder={tModalBuyer('additional')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full resize-none placeholder-[#A99C88]/50 break-keep mt-2" />
+                <textarea name="additional_message" rows={3} placeholder={tModalBuyer('additional')} className="bg-[#222220] border border-[#A99C88]/30 text-[#F4EFE4] focus:outline-none focus:border-[#F4EFE4] p-3 text-sm w-full resize-none placeholder-[#A99C88]/50 mt-2" />
               </div>
 
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full py-4 text-center text-sm font-mono tracking-wider transition-all duration-300 mt-6 border border-[#F4EFE4]/80 text-[#F4EFE4] hover:bg-[#F4EFE4] hover:text-[#111110] uppercase disabled:opacity-50 disabled:cursor-not-allowed break-keep"
+                className="w-full py-4 text-center text-sm font-mono tracking-wider transition-all duration-300 mt-6 border border-[#F4EFE4]/80 text-[#F4EFE4] hover:bg-[#F4EFE4] hover:text-[#111110] uppercase disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? tModalCommon('submitting') : tModalBuyer('submit')}
               </button>
@@ -666,13 +666,13 @@ export default function HomePage() {
 
             {/* Modal Header */}
             <div className="mb-8">
-              <h2 className="text-xl md:text-2xl font-light text-[#F4EFE4] tracking-wide mb-2 break-keep">
+              <h2 className="text-xl md:text-2xl font-light text-[#F4EFE4] tracking-wide mb-2">
                 {tLegal(`${legalModalType}.title`)}
               </h2>
             </div>
             
             {/* Modal Content */}
-            <div className="text-sm text-[#F4EFE4]/80 leading-relaxed font-light whitespace-pre-line break-keep">
+            <div className="text-sm text-[#F4EFE4]/80 leading-relaxed font-light whitespace-pre-line">
               {tLegal(`${legalModalType}.content`)}
             </div>
           </div>

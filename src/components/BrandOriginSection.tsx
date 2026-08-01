@@ -1,18 +1,19 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import { useTranslations } from 'next-intl';
+import { useEffect, useRef} from 'react';
+import { useTranslations, useLocale} from 'next-intl';
 
 export default function BrandOriginSection() {
   const t = useTranslations('origin');
+  const locale = useLocale();
   const videoRef = useRef<HTMLVideoElement>(null);
 
   // 영상 재생 속도를 0.5배속으로 낮춰 차분한 텍스처 느낌 연출
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.playbackRate = 0.5;
-    }
-  }, []);
+   }
+ }, []);
 
   return (
     // 최상단은 w-full로 화면 전체를 채움
@@ -50,10 +51,10 @@ export default function BrandOriginSection() {
             <span className="font-mono text-[10px] tracking-[0.2em] text-[#C5A880]/80 uppercase block mb-3">
               01 / PROBLEM
             </span>
-            <h3 className="font-serif text-xl font-medium text-neutral-100 mb-4 tracking-tight">
+            <h3 className="text-lg md:text-xl font-normal tracking-wide text-primary-light mb-4">
               {t('step1.title')}
             </h3>
-            <p className="text-sm leading-relaxed text-neutral-300 break-keep font-sans">
+            <p className={`text-sm md:text-base font-light leading-relaxed tracking-normal text-[#F4EFE4]/80`}>
               {t('step1.desc1')}
             </p>
           </div>
@@ -63,10 +64,10 @@ export default function BrandOriginSection() {
             <span className="font-mono text-[10px] tracking-[0.2em] text-[#C5A880]/80 uppercase block mb-3">
               02 / SOLUTION
             </span>
-            <h3 className="font-serif text-xl font-medium text-neutral-100 mb-4 tracking-tight">
+            <h3 className="text-lg md:text-xl font-normal tracking-wide text-primary-light mb-4">
               {t('step2.title')}
             </h3>
-            <p className="text-sm leading-relaxed text-neutral-300 break-keep font-sans">
+            <p className={`text-sm md:text-base font-light leading-relaxed tracking-normal text-[#F4EFE4]/80`}>
               {t('step2.desc1')}
             </p>
           </div>

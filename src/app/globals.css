@@ -19,3 +19,34 @@ body {
 .data-font {
   font-family: var(--font-sans);
 }
+
+/* =========================================
+   Global Typography & Line Break System 
+   ========================================= */
+
+/* 1. Language-Specific Word Breaks */
+:lang(ko) {
+  word-break: keep-all; 
+  overflow-wrap: break-word;
+}
+
+:lang(ja) {
+  word-break: break-all; 
+  line-break: strict;
+  overflow-wrap: break-word;
+}
+
+:lang(en), :lang(fr) {
+  word-break: normal;
+  overflow-wrap: break-word;
+  hyphens: none;
+}
+
+/* 2. Text Wrapping Balance */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p, li, span, div, a, button, label {
+  text-wrap: pretty;
+}
