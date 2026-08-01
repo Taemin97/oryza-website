@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Gowun_Batang } from 'next/font/google';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
@@ -11,6 +11,11 @@ const gowunBatang = Gowun_Batang({
   variable: '--font-gowun-batang',
   subsets: ['latin'],
 });
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
