@@ -3,9 +3,5 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="ko" suppressHydrationWarning>
-      <body>{children}</body>
-    </html>
-  );
+  return children;
 }
