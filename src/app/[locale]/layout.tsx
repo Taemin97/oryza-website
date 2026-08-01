@@ -16,17 +16,22 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   
   const siteUrl = 'https://oryzaandco.com';
+  
+  // Default (English)
   let title = 'Oryza & Co. | Korean Wine & Spirits Sensory Data';
   let description = 'Oryza & Co. quantifies terroir and sensory metrics of Korean wine and spirits to establish objective quality standards for global fine dining.';
+  let ogDescription = 'Quantifying terroir and sensory metrics of Korean wine and spirits for global fine dining.';
   let canonicalPath = '/en/';
   
   if (locale === 'ko') {
     title = 'Oryza & Co. | 한국 전통주 관능 데이터 & 큐레이션';
     description = 'Oryza & Co.는 한국 전통주의 떼루아와 관능 평가 지표를 정량화하여 객관적인 미식 품질 표준을 구축하고, 정밀 큐레이션을 통해 세계 시장에 선보입니다.';
+    ogDescription = '한국 전통주의 떼루아와 관능 평가 지표를 정량화하여 객관적인 미식 품질 표준을 구축합니다.';
     canonicalPath = '/';
   } else if (locale === 'fr') {
     title = 'Oryza & Co. | Données Sensorielles Vins & Spiritueux Coréens';
     description = 'Oryza & Co. quantifie le terroir et les données sensorielles des vins et spiritueux coréens pour établir des standards de qualité gastronomiques.';
+    ogDescription = 'Quantification du terroir et des données sensorielles des vins et spiritueux coréens pour la haute gastronomie.';
     canonicalPath = '/fr/';
   }
 
@@ -41,6 +46,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'fr': `${siteUrl}/fr/`,
         'x-default': `${siteUrl}/`,
       },
+    },
+    openGraph: {
+      type: 'website',
+      siteName: 'Oryza & Co.',
+      title,
+      description: ogDescription,
+      url: `${siteUrl}${canonicalPath}`,
+      images: [
+        {
+          url: 'https://oryzaandco.com/images/hero-grain-object.jpeg',
+        },
+      ],
     },
   };
 }
