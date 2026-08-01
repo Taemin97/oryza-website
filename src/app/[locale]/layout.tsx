@@ -15,11 +15,11 @@ const gowunBatang = Gowun_Batang({
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   
-  let title = 'Oryza & Co. | Global Korean Spirits Platform';
+  let title = 'Oryza & Co. | Global Korean Wine & Spirits Platform';
   if (locale === 'ko') {
     title = 'Oryza & Co. | 한국 전통주 글로벌 플랫폼';
   } else if (locale === 'fr') {
-    title = 'Oryza & Co. | Plateforme Globale de Spiritueux Coréens';
+    title = 'Oryza & Co. | Plateforme Globale de Vins & Spiritueux Coréens';
   }
 
   return {
