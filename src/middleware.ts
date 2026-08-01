@@ -7,6 +7,5 @@ export default createMiddleware({
 });
 
 export const config = {
-    // 정적 파일 및 _next 내부 파일을 제외한 모든 요청에 미들웨어 적용
     matcher: ['/((?!api|_next|_vercel|.*\\..*).*)']
 };
