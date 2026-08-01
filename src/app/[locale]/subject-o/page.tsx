@@ -29,6 +29,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Subject O — Distillata N°01 | Oryza & Co.',
+      description: '국산 쌀(Oryza Sativa) 기반 단일 원료 증류식 소주. 정밀 관능 데이터 구축 완료.',
+      images: ['https://oryzaandco.com/images/subject-o-teaser.jpg'],
+    },
+    other: {
+      'twitter:domain': 'oryzaandco.com',
+    },
   };
 }
 

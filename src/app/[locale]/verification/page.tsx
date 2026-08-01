@@ -29,6 +29,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: '기술 검증 및 데이터 체계 | Oryza & Co.',
+      description: '단일 국산 원료 선별, 독립 검증, 성분 분석 데이터 아카이빙을 통한 객관적 품질 보증 표준.',
+      images: ['https://oryzaandco.com/images/russik-there-3049662_1920.jpg'],
+    },
+    other: {
+      'twitter:domain': 'oryzaandco.com',
+    },
   };
 }
 

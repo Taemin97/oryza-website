@@ -59,6 +59,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: ogDescription,
+      images: ['https://oryzaandco.com/images/hero-grain-object.jpeg'],
+    },
+    other: {
+      'twitter:domain': 'oryzaandco.com',
+    },
   };
 }
 
