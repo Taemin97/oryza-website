@@ -13,6 +13,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: '기술 검증 및 데이터 체계 | Oryza & Co.',
     description: '단일 국산 원료 선별, 전문가 그룹의 독립 검증, 화학적 성분 분석 및 관능 평가 데이터 아카이빙을 통해 전통주의 객관적 품질 보증 표준을 제공합니다.',
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: canonicalUrl,
       languages: {

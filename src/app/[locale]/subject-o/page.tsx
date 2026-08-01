@@ -13,6 +13,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: 'Subject O — Distillata N°01 | Oryza & Co.',
     description: '국산 쌀(Oryza Sativa)을 단일 원료로 전통 옹기에서 숙성한 증류식 소주로, 정밀 성분 분석과 관능 데이터 구축을 완료한 정량적 기준의 제품입니다.',
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: canonicalUrl,
       languages: {

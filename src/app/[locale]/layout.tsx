@@ -44,6 +44,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title,
     description,
+    robots: {
+      index: true,
+      follow: true,
+    },
     alternates: {
       canonical: canonicalUrl,
       languages: {
