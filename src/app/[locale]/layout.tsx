@@ -15,16 +15,33 @@ const gowunBatang = Gowun_Batang({
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   
-  let title = 'Oryza & Co. | Global Korean Wine & Spirits Platform';
+  const siteUrl = 'https://oryzaandco.com';
+  let title = 'Oryza & Co. | Korean Wine & Spirits Sensory Data';
+  let description = 'Oryza & Co. quantifies terroir and sensory metrics of Korean wine and spirits to establish objective quality standards for global fine dining.';
+  let canonicalPath = '/en/';
+  
   if (locale === 'ko') {
-    title = 'Oryza & Co. | 한국 전통주 글로벌 플랫폼';
+    title = 'Oryza & Co. | 한국 전통주 관능 데이터 & 큐레이션';
+    description = 'Oryza & Co.는 한국 전통주의 떼루아와 관능 평가 지표를 정량화하여 객관적인 미식 품질 표준을 구축하고, 정밀 큐레이션을 통해 세계 시장에 선보입니다.';
+    canonicalPath = '/';
   } else if (locale === 'fr') {
-    title = 'Oryza & Co. | Plateforme Globale de Vins & Spiritueux Coréens';
+    title = 'Oryza & Co. | Données Sensorielles Vins & Spiritueux Coréens';
+    description = 'Oryza & Co. quantifie le terroir et les données sensorielles des vins et spiritueux coréens pour établir des standards de qualité gastronomiques.';
+    canonicalPath = '/fr/';
   }
 
   return {
     title,
-    description: 'Global Curation & Branding Platform for Premium Korean Spirits & Fermented Rice Wines',
+    description,
+    alternates: {
+      canonical: `${siteUrl}${canonicalPath}`,
+      languages: {
+        'ko': `${siteUrl}/`,
+        'en': `${siteUrl}/en/`,
+        'fr': `${siteUrl}/fr/`,
+        'x-default': `${siteUrl}/`,
+      },
+    },
   };
 }
 
